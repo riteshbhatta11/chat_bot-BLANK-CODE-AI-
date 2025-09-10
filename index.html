@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+form {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+    padding: 40px;
+}
+
+.register {
+    margin-bottom: 25px;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4a86e8;
+    box-shadow: 0 0 0 3px rgba(74, 134, 232, 0.2);
+}
+
+input[type="submit"] {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 16px;
+    margin-bottom: 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+input[type="submit"]:active {
+    transform: translateY(0);
+}
+
+.login {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+a {
+    color: #4a86e8;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #6a11cb;
+    text-decoration: underline;
+}
+
+::placeholder {
+    color: #aaa;
+}
+
+@media (max-width: 500px) {
+    form {
+        padding: 30px 25px;
+    }
+    
+    input {
+        padding: 12px;
+    }
+}
+    </style>
+</head>
+<body>
+    <form action="register.php" method="post">
+        <div class="register">
+            <input type="text" class="fullname" name="fullname" placeholder="NAME" required>
+            <input type="email" class="email" name="email" placeholder="EMAIL" required>
+            <input type="password" class="user_password" name="user_password" placeholder="PASSWORD" required>
+            <input type="number" class="phone_number" name="phone_number" placeholder="NUMBER">
+            <input type="submit">
+        </div>
+        <div class="login">
+            <a href="login.html">HAVE A ACCOUNT</a>
+        </div>
+    </form>
+</body>
+</html>
+
